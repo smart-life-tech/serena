@@ -30,7 +30,7 @@ This project demonstrates a Raspberry Pi-based system that allows users to input
 4. Clone the repository to your Raspberry Pi:
 
     ```bash
-    git clone https://github.com/your-username/touch-and-speak-rpi.git
+    git clone https://github.com/smart-life-tech/serena.git
     ```
 
 5. Install the required Python libraries:
