@@ -53,7 +53,7 @@ This project demonstrates a Raspberry Pi-based system that allows users to input
 4. The system converts the sentence to speech and plays it using the connected audio device.
 
 ## Customization
-
+##note main.py could be any of the file from the repo above
 - Adjust GPIO pin configurations in `main.py` if your touch sensors are connected to different pins.
 - Modify the alphabet pairs in `main.py` based on your sensor mapping.
 - Tweak the timeout duration and other settings in `main.py` to suit your preferences.
