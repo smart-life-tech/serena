@@ -39,10 +39,14 @@ This project demonstrates a Raspberry Pi-based system that allows users to input
     pip install -r requirements.txt
     ```
 
-6. Run the main script:
+6. Run the main scripts one at a time, make sure you are in the diectory of the file you cloned:
 
     ```bash
-    python main.py
+    python lcdOnly.py
+    python tts-stt.py
+    python withoutSpeech.py
+    python keypadTest.py
+    python withspeech/speech.py
     ```
 
 ## Usage
