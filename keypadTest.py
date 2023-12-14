@@ -1,6 +1,6 @@
 import RPi.GPIO as GPIO
 import time
-import serial
+#import serial
 
 # Set up GPIO pins for touch sensing
 touch_pins = [2, 3, 4, 17, 27, 22, 10, 9, 11, 5, 6, 13, 19, 26]  # Adjust the number of pins as needed
@@ -9,7 +9,7 @@ for pin in touch_pins:
     GPIO.setup(pin, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 
 # Set up Serial communication
-ser = serial.Serial('/dev/ttyS0', 9600, timeout=1)  # Use '/dev/ttyS0' for Raspberry Pi 3
+#ser = serial.Serial('/dev/ttyS0', 9600, timeout=1)  # Use '/dev/ttyS0' for Raspberry Pi 3
 
 # Map sets of three characters to each sensor
 sensor_mapping = {
@@ -65,7 +65,7 @@ try:
                 start_time = time.time()
                 characters = sensor_mapping.get(pin, '???')  # Default to '???' if no mapping found
                 print(f"Touched on pin {pin}: {characters}")
-                ser.write(f"Touched on pin {pin}: {characters}\n".encode())
+                #ser.write(f"Touched on pin {pin}: {characters}\n".encode())
                 
                 while GPIO.input(pin) == GPIO.LOW:
                     if time.time() - start_time > long_press_threshold:
@@ -80,4 +80,4 @@ except KeyboardInterrupt:
     pass
 finally:
     GPIO.cleanup()
-    ser.close()
+    #ser.close()
