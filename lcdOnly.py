@@ -1,6 +1,5 @@
 import board
 from adafruit_character_lcd.character_lcd_i2c import Character_LCD_I2C #pip install adafruit-circuitpython-charlcd
-
 import time
 
 # Set up LCD
