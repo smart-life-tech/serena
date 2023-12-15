@@ -1,3 +1,23 @@
+'''
+run these two commands on the terminal
+sudo apt-get update
+sudo apt-get install espeak
+sudo apt-get install --reinstall alsa-utils
+sudo alsa force-reload
+
+
+No Default Input Device Available:
+The error "OSError: No Default Input Device Available" suggests that the script is
+ unable to find a default microphone on your Raspberry Pi.
+Make sure you have a functional microphone connected to your Raspberry Pi. 
+Additionally, you can try specifying the microphone index explicitly in the Microphone constructor. 
+First, identify the index of your microphone using the following command:
+
+test this command on termianl
+
+arecord -l
+'''
+
 import pyttsx3
 import speech_recognition as sr
 
